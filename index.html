@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Questrial:ital@0;1&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-
     <style>
+
         @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700');
         html, body {
           font-family: sans-serif;
@@ -44,7 +45,7 @@
         }
 
 
-        aside {
+        section#welcome aside {
           align-content: center;
           text-align: center;
           max-height: 640px;
@@ -57,6 +58,7 @@
           max-height: 100%;
           height: 640px;
           margin: auto;
+          z-index: 6;
           width:100%;
         }
 
@@ -358,6 +360,26 @@
         line-height: normal;
 
       }
+
+
+      // WELCOME
+
+      section#welcome > .container > .row,
+      section#welcome > .container {
+        min-height: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 768px) {
+
+        section#welcome {
+          min-height: 100% !Important;
+          height: auto !Important;
+        }
+
+      }
+
+
     </style>
   </head>
   <body id="top" data-spy="scroll" data-target="#nav" data-offset="90">
@@ -401,10 +423,10 @@
       </div>
     </nav>
     <section id="welcome" class="h-100 bg-custom text-white position-relative">
-      <div class="container h-100" style="z-index:3">
-        <div class="row align-items-center h-100" style="z-index:4">
+      <div class="container h-100 d-grid" style="z-index:3">
+        <div class="row align-items-center" style="z-index:4">
 
-          <div class="col" style="z-index:5">
+          <div class="col-md-6 col-sm-12 order-sm-2 order-md-1" style="z-index:5">
             <h1 class="pt-5 pb-5">Milujeme tvořit jednoduchostí.</h1>
             <div class="text-right mb-2 nav-button nav-button-navbtn">
 
@@ -416,9 +438,9 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col-md-6 col-sm-12 order-sm-1">
             <aside>
-                <model-viewer src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb" alt="" interaction-prompt="none" shadow-intensity="1" touch-action="pan-y" ar disable-tap camera-controls auto-rotate></model-viewer>
+                <model-viewer src="/Handgun_Packed.glb" alt="" interaction-prompt="none" shadow-intensity="1" touch-action="pan-y" ar disable-tap camera-controls auto-rotate></model-viewer>
             </aside>
           </div>
 
@@ -757,7 +779,6 @@
             {
                 $('.navbar .active').removeClass('active');
             }
-
 
             if ($posit >= 50)
             {

@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Questrial:ital@0;1&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Questrial:ital@0;1&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
 
         @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700');
@@ -48,18 +48,18 @@
         section#welcome aside {
           align-content: center;
           text-align: center;
-          max-height: 640px;
           display: grid;
-          height: 100%;
-          width: 100%;
         }
 
         model-viewer {
-          max-height: 100%;
-          height: 640px;
+          height: 877px;
           margin: auto;
+          margin-top: auto;
+          margin-right: auto;
+          margin-bottom: auto;
+          margin-left: auto;
           z-index: 6;
-          width:100%;
+          width: 100%;
         }
 
         .py-9 {
@@ -122,11 +122,8 @@
           font-size: 1rem;
         }
 
-        .logo {
-          height: 47px;
-        }
         h1 {
-          font-size: 4rem;
+          font-size: 5rem;
           font-weight: 700!important;
           color: #fff;
           font-family: Montserrat;
@@ -213,6 +210,7 @@
 
       .nav-sticky .logo .logo-dark {
         display: inline-block;
+        filter: invert(1);
       }
 
       .nav-sticky .logo .logo-light {
@@ -386,9 +384,9 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="nav">
       <div class="container">
         <div class="mb-1 pb-2">
-          <a href="/" class="logo">
-            <img src="logo-light.png" alt="" class="logo-light align-middle" height="47" />
-            <img src="logo-dark.png" alt="" class="logo-dark align-middle" height="47" />
+          <a href="#welcome" class="logo active">
+            <img src="https://images.contentstack.io/v3/assets/bltb61dcb3c40854cd9/blt30226fb13228063a/633f71fea819441366926b47/sw-logo-txt.png" alt="" class="logo-light align-middle" height="48">
+            <img src="https://images.contentstack.io/v3/assets/bltb61dcb3c40854cd9/blt30226fb13228063a/633f71fea819441366926b47/sw-logo-txt.png" alt="" class="logo-dark align-middle" height="48">
           </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -417,7 +415,7 @@
           </ul>
           <div class="ms-3">
             <div class="text-right mb-0 nav-button nav-button-navbtn">
-              <a href="/package" class="nav-btn btn btn-outline-light rounded-5 border-2">Kde začít?</a>    				</div>
+              <a href="#package" class="nav-btn btn btn-outline-light rounded-5 border-2">Kde začít?</a>    				</div>
           </div>
         </div>
       </div>
@@ -426,8 +424,8 @@
       <div class="container h-100 d-grid" style="z-index:3">
         <div class="row align-items-center" style="z-index:4">
 
-          <div class="col-md-6 col-sm-12 order-sm-2 order-md-1" style="z-index:5">
-            <h1 class="pt-5 pb-5">Milujeme tvořit jednoduchostí.</h1>
+          <div class="col-md-4 col-sm-12 order-sm-2 order-md-1" style="z-index:5">
+            <h1 class="pt-5 pb-5">Pistols, Revolvers, and Rifles</h1>
             <div class="text-right mb-2 nav-button nav-button-navbtn">
 
               <div class="d-flex">
@@ -438,9 +436,9 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-sm-12 order-sm-1">
+          <div class="col-md-8 col-sm-12 order-sm-1">
             <aside>
-                <model-viewer src="/Handgun_Packed.glb" alt="" interaction-prompt="none" shadow-intensity="1" touch-action="pan-y" ar disable-tap camera-controls auto-rotate></model-viewer>
+                <model-viewer src="/Handgun_Packed.glb" alt="" interaction-prompt="none" shadow-intensity="1" touch-action="pan-y" ar="" disable-tap="" camera-controls="" auto-rotate="" ar-status="not-presenting"></model-viewer>
             </aside>
           </div>
 
@@ -547,7 +545,7 @@
 
                     <main>
                       <table class="table border-top mt-4 text-left w-auto mx-auto">
-                        <tr>
+                        <tbody><tr>
                           <td><i class="h1 bi bi-check-circle"></i></td>
                           <td valign="middle"><h3 class="text-left">Lorem ipsum</h3></td>
                         </tr>
@@ -555,9 +553,9 @@
 
                           <td valign="middle"><i class="h1 bi bi-x-circle"></i></td><td>Lorem ipsum</td>
                         </tr>
-                    </table>
+                    </tbody></table>
 
-                      </ul>
+
                     </main>
                   </article>
                 </div>
@@ -839,5 +837,6 @@
 </script>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-  </body>
-</html>
+
+
+</body></html>

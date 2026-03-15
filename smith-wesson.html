@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Questrial:ital@0;1&amp;display=swap">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Questrial:ital@0;1&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700');
+        html, body {
+          font-family: sans-serif;
+          min-height: 100%;
+          font-size: 1rem;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: Roboto;
+        }
+
+        h1, h2, h3, h4, h5 {
+          font-family: Questrial;
+        }
+
+        nav ul li a {
+          font-family: Raleway;
+        }
+
+        .nav-btn {
+          font-family: Montserrat;
+        }
+
+        .container, .row, .col, .col-12, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+          z-index: 5;
+        }
+
+
+        section#welcome aside {
+          align-content: center;
+          text-align: center;
+          display: grid;
+        }
+
+        model-viewer {
+
+
+          margin-bottom: auto;
+          margin-top: auto;
+          height: 877px;
+          width: 100%;
+          z-index: 6;
+
+        }
+
+        .py-9 {
+          padding-top: 7rem;
+          padding-bottom: 7rem;
+        }
+        .my-9 {
+          margin-top: 7rem;
+          margin-bottom: 7rem;
+        }
+
+        .py-9 {
+          padding-top: 7rem;
+          padding-bottom: 7rem;
+        }
+        a.js-scroll-trigger:link,
+        a.js-scroll-trigger:visited {
+        }
+
+        .navbar-custom.nav-sticky {
+
+          max-height: 89px;
+          min-height: 89px;
+          height: 89px;
+        }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+          color: #25ad00 !important;
+        }
+
+        .bg-custom {
+          background-color: #144a00 !important;
+        }
+        .nav-btn, .nav-button .nav-btn {
+
+          text-transform: uppercase;
+          padding-right: 1.25rem;
+          display: inline-block;
+          padding-left: 1.25rem;
+          line-height: 1.7rem;
+          min-width: 11rem;
+        }
+
+        .nav-btn.nav-btn-sm, .nav-button .nav-btn.nav-btn-sm {
+          font-size: 0.75rem;
+          width: 10rem;
+        }
+
+        .nav-btn.nav-btn-lg, .nav-button .nav-btn.nav-btn-lg {
+          font-weight: 800 !important;
+          padding-right: 1.25em;
+          padding-left: 1.25rem;
+          display: inline-block;
+          line-height: 1.8rem;
+          font-size: 0.85rem;
+          width: 20rem;
+        }
+
+        .navbar-custom .navbar-nav li a {
+          font-size: 1rem;
+        }
+
+        h1 {
+          font-size: 5rem;
+          font-weight: 700!important;
+          color: #fff;
+          font-family: Montserrat;
+        }
+
+        table {
+
+        }
+      .navbar-custom {
+        background-color: transparent;
+        padding: 20px 0px;
+        width: 100%;
+        border-radius: 0px;
+        z-index: 999;
+        margin-bottom: 0px;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .navbar-custom .navbar-nav li a {
+        font-weight: 600;
+        color: #FFF !important;
+        font-size: 0.95rem;
+        background-color: transparent !important;
+        margin: 0 7px;
+        line-height: 24px;
+        transition: all 0.5s;
+      }
+
+      .nav-btn {
+        line-height: 1rem;
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+
+
+      .nav-sticky .nav-btn.btn.btn-outline-light {
+        border-color: #b4b4b4;
+        color: #a3a3a3;
+      }
+
+      .nav-sticky .nav-btn.btn.btn-outline-light.active {
+        background-color: #fff;
+        border-color: #24ab00;
+      }
+
+      .nav-btn.btn.btn-outline-light.active,
+      .nav-button .btn:hover {
+        color: #24ab00 !IMPORTANT;
+      }
+
+
+
+      .navbar-custom .navbar-toggler {
+          color: #fff;
+          font-size: 35px;
+          padding: 0px;
+      }
+
+      .navbar-custom.nav-sticky a.nav-btn:hover {
+        border-color: #b3b3b3;
+      }
+
+      .navbar-custom.nav-sticky a.nav-btn.active {
+        border-color: #b3b3b3;
+      }
+
+      .navbar-custom.nav-sticky {
+          box-shadow: 0 10px 33px rgba(0, 0, 0, .1) !important;
+          background-color: #fff !important;
+          padding: 15px 0px;
+      }
+      .nav-sticky .navbar-nav li a {
+          color: #4b4b4b !important;
+      }
+
+
+
+      .logo .logo-light {
+        display: inline-block;
+      }
+
+      .nav-sticky .logo .logo-dark {
+        display: inline-block;
+        filter: invert(1);
+      }
+
+      .nav-sticky .logo .logo-light {
+        display: none;
+      }
+
+      .logo .logo-dark {
+        display: none;
+      }
+
+      .nav-sticky.navbar-toggler {
+        color: #000;
+      }
+
+      body > header {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+
+      body > section {
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+
+      body section.bg-light > header,
+      body section.bg-white > header,
+      body section.bg-custom > header {
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+      }
+
+      body section.bg-light > header h1,
+      body section.bg-white > header h1  {
+        text-transform: uppercase;
+        font-family: Montserrat;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 4rem;
+        color: #25ad00;
+      }
+
+
+      body section.bg-light > header p,
+      body section.bg-white > header p {
+        text-align: center;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 300;
+        color: #b7b7b7;
+      }
+
+      .btn:hover {
+        color: #24ab00;
+      }
+
+      .btn-outline-custom, .btn-outline-custom:hover {
+          border-color: #24ab00;
+          color: #24ab00;
+      }
+
+      .nav-button .btn-outline-custom:hover {
+          background-color: transparent;
+          color: #fff !Important;
+
+      }
+      .btn-outline-white:hover,
+      .btn-outline-light:hover {
+          background-color: transparent;
+          color: #24ab00 !Important;
+
+      }
+
+      div.banner {
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+        z-index: 2;
+      }
+
+      div.banner > * {
+        z-index: 3;
+      }
+
+      div.banner > * > * {
+        z-index: 4;
+      }
+
+      div.banner > * > * > * {
+        z-index: 5;
+      }
+
+      div.banner h1 {
+        font-weight: 400 !Important;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #fff;
+      }
+      div.bg-package,
+      div.bg-welcome,
+      div.bg-company {
+            background-image: url(company.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-blend-mode: overlay;
+            background-position: center;
+            background-color: #144a00;
+            position: absolute;
+            opacity: 0.25;
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+      }
+
+      div.bg-welcome {
+            background-image: url(https://ir.smith-wesson.com/sites/g/files/knoqqb101381/themes/site/nir_pid2790/dist/images/hero/guy-in-factory.jpg);
+      }
+      div.bg-package {
+            background-image: url(package.jpg);
+      }
+
+      section {
+        border-bottom-style: solid;
+        border-bottom-width: 0px;
+        border-bottom-color: #fff;
+      }
+
+      #package h1 {
+          font-weight: 300 !Important;
+          text-transform: uppercase;
+          line-height: normal;
+          text-align: center;
+          margin-bottom: 2rem;
+          font-size: 3rem;
+          color: #fff;
+      }
+      #package article h2 {
+        font-weight: 700 !Important;
+        FONT-FAMILY: Raleway;
+        font-size: 1.8rem;
+        line-height: normal;
+
+      }
+
+
+      // WELCOME
+
+      section#welcome > .container > .row,
+      section#welcome > .container {
+        min-height: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 768px) {
+
+        section#welcome {
+          min-height: 100% !Important;
+          height: auto !Important;
+        }
+
+      }
+
+
+    </style>
+  </head>
+  <body id="top" data-spy="scroll" data-target="#nav" data-offset="90">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="nav">
+      <div class="container">
+        <div class="mb-1 pb-2">
+          <a href="#welcome" class="logo active">
+            <img src="https://images.contentstack.io/v3/assets/bltb61dcb3c40854cd9/blt30226fb13228063a/633f71fea819441366926b47/sw-logo-txt.png" alt="" class="logo-light align-middle" height="48">
+            <img src="https://images.contentstack.io/v3/assets/bltb61dcb3c40854cd9/blt30226fb13228063a/633f71fea819441366926b47/sw-logo-txt.png" alt="" class="logo-dark align-middle" height="48">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="mdi mdi-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto me-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="#welcome">Welcome</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#webzine">Webzine</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#company">Company</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="ms-3">
+            <div class="text-right mb-0 nav-button nav-button-navbtn">
+              <a href="#package" class="nav-btn btn btn-outline-light rounded-5 border-2">Kde začít?</a>    				</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="welcome" class="h-100 bg-custom text-white position-relative">
+      <div class="container h-100 d-grid" style="z-index:3">
+        <div class="row align-items-center" style="z-index:4">
+
+          <div class="col-md-4 col-sm-12 order-sm-2 order-md-1" style="z-index:5">
+            <h1 class="pt-5 pb-5">Pistols, Revolvers, and Rifles</h1>
+            <div class="text-right mb-2 nav-button nav-button-navbtn">
+
+              <div class="d-flex">
+                <div class="me-3"><a href="#product" class="nav-btn btn rounded-5 border-2 btn-outline-light">Prozkoumat</a></div>
+                <div class="me-3"><a href="#contact" class="nav-btn btn rounded-5 border-2 btn-outline-custom">Napište nám</a></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-8 col-sm-12 order-sm-1">
+            <aside>
+                <model-viewer src="/Handgun_Packed.glb" id="viewer" alt="" interaction-prompt="none" shadow-intensity="1" touch-action="pan-y" ar="" disable-tap="" camera-controls="" auto-rotate="" ar-status="not-presenting"></model-viewer>
+            </aside>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="bg-welcome"></div>
+
+
+    </section>
+    <section id="product" class="h-100 bg-white">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-4">
+              <h1>Product</h1>
+              <p>Lorem ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+
+      </main>
+    </section>
+    <section id="service" class="h-100 bg-light">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-4">
+              <h1>Service</h1>
+              <p>Lorem ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+
+      </main>
+    </section>
+    <section id="webzine" class="h-100 bg-white">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-4">
+              <h1>Webzine</h1>
+              <p>Lorem ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+
+      </main>
+    </section>
+    <section id="company" class="bg-custom">
+      <div role="banner" class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1>Chcete se s námi seznámit?</h1>
+              <div class="text-center nav-button nav-button-navbtn">
+                <a href="/company" class="nav-btn btn rounded-5 border-2 btn-outline-light">Pokračovat</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-company"></div>
+    </section>
+    <section id="contact" class="h-100 bg-white">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-4">
+              <h1>Contact</h1>
+              <p>Lorem ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+
+      </main>
+    </section>
+    <section id="package" class="h-75 bg-custom fx-start">
+      <div class="banner" role="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>Packages</h1>
+            </div>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="card shadow-md m-4">
+                <div class="card-body pt-4">
+                  <article>
+
+                    <header>
+                      <h2>Default</h2>
+                    </header>
+
+                    <main>
+                      <table class="table border-top mt-4 text-left w-auto mx-auto">
+                        <tbody><tr>
+                          <td><i class="h1 bi bi-check-circle"></i></td>
+                          <td valign="middle"><h3 class="text-left">Lorem ipsum</h3></td>
+                        </tr>
+                        <tr>
+
+                          <td valign="middle"><i class="h1 bi bi-x-circle"></i></td><td>Lorem ipsum</td>
+                        </tr>
+                    </tbody></table>
+
+
+                    </main>
+                  </article>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card shadow-md m-4">
+                <div class="card-body">
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card shadow-md m-4">
+                <div class="card-body">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-package"></div>
+    </section>
+    <footer class="h-50 bg-dark pt-5 pb-5">
+      <div class="container pb-5">
+        <div class="row">
+
+        </div>
+
+
+      </div>
+    </footer>
+    <script src="jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    ! function($) {
+      "use-strict";
+
+      String.prototype.replaceAll = function(search, replacement) {
+        var target = this;
+        return target.split(search).join(replacement);
+      };
+
+      var Motion = function()
+      {
+          this.pages = this.sections();
+
+        //  history.scrollRestoration = 'manual';
+      };
+
+      Motion.prototype.sections = function()
+      {
+          $pages = [];
+
+          $('body > section').each(function(){
+
+              $pages.push($(this).attr('id'));
+
+          });
+
+          return $pages;
+      },
+
+
+
+      Motion.prototype.addPageId = function (alias)
+      {
+
+          this.pages.push(alias);
+
+      },
+
+      Motion.prototype.getPageByOffset = function (posit)
+      {
+          for (target=0; target<this.pages.length; target++)
+          {
+              maxim = $('#'+this.pages[target]).offset().bottom;
+
+              minim = $('#'+this.pages[target]).offset().top;
+
+              total = $('#'+this.pages[target]).height();
+              if (maxim == (posit + 89))
+              {
+                  return this.pages[target];
+              }
+              if ((minim + total) > (posit + 89))
+              {
+                  return this.pages[target];
+              }
+
+
+          }
+      },
+
+      Motion.prototype.initScroll = function()
+      {
+
+        $scope = this;
+
+        $(window).scroll(function(){
+
+          $posit = $(window).scrollTop();
+
+          $("#nav a.active").each(function (){
+
+              $(this).removeClass('active');
+
+          });
+
+          if ($tween = $scope.getPageByOffset($posit))
+          {
+              if ($("#nav a:focus"))
+              {
+                  $("#nav a:focus").trigger('blur');
+              }
+
+              active = "#nav a[href='#" + $tween + "']";
+
+              if ($(active))
+              {
+                  $(active).addClass('active');
+              }
+
+          }
+
+
+        });
+
+
+
+          $('a').on('click', function(event) {
+
+            if ($(this).attr('href').startsWith('/'))
+            {
+                scope = $(this).attr('href').substr(1);
+
+                scope = scope.replaceAll('-', '_');
+
+                scope = '#' + scope;
+            }
+
+            if ($(this).attr('href').startsWith('#'))
+            {
+                scope = $(this).attr('href');
+            }
+
+            if ($(scope).length > 0)
+            {
+
+
+                posit = $(scope).offset().top - 88;
+
+                //$(this).addClass('active');
+
+
+                $('html, body').stop().animate({
+
+                    scrollTop: posit
+
+                });
+
+
+
+                event.preventDefault();
+
+
+
+            }
+          });
+
+
+
+
+          $('.navbar-nav a').click(function(event) {
+              $motion = $(this);
+
+              $('html, body').stop().animate({
+                  scrollTop: $('#'+$motion.attr('href').substr(1)).offset().top - 88
+              });
+              event.preventDefault();
+          });
+          $('.scroll').click(function(event) {
+              $motion = $(this);
+              $('html, body').stop().animate({
+                  scrollTop: $($motion.attr('href')).offset().top - 88
+              });
+              event.preventDefault();
+          });
+      },
+
+      Motion.prototype.initSticky = function()
+      {
+
+          $posit = $(window).scrollTop();
+
+          $tween = this.getPageByOffset($posit);
+
+          $maxim = $('.fx-start').offset().top - 89;
+
+
+
+          if (location.hash)
+          {
+              $('html, body').stop().animate({
+                  scrollTop: $(location.hash).offset().top - 89
+              });
+          }
+
+
+          $(window).scroll(function(){
+
+
+
+            if ($maxim && $maxim > $posit)
+            {
+                $('.navbar .active').removeClass('active');
+            }
+
+            if ($posit >= 50)
+            {
+
+
+                if (!$('#nav').hasClass('nav-sticky'))
+                {
+                     $('#nav').addClass('nav-sticky');
+                }
+
+
+
+
+            } else {
+                if ($('#nav').hasClass('nav-sticky'))
+                {
+                    $('#nav').removeClass('nav-sticky');
+                }
+
+            }
+          });
+      },
+
+      Motion.prototype.initNavbar = function()
+      {
+          $('body nav a').each(function(){
+            scope = $(this).attr('href').substr(1);
+            if (!scope) scope = 'welcome';
+            scope = scope.replaceAll('-', '_');
+            $(this).attr('href', '#'+scope);
+          });
+
+
+
+
+
+      },
+
+      Motion.prototype.init = function() {
+        this.initSticky();
+        this.initScroll();
+        this.initNavbar();
+      },
+
+      $.Motion = new Motion,
+      $.Motion.Constructor = Motion
+
+    }(window.jQuery),
+    function($) {
+      "use-strict";
+
+      $.Motion.init();
+
+      // Outline Drop
+
+      const viewer = document.getElementById("viewer");
+
+      window.addEventListener("DOMContentLoaded", (event) => {
+
+      	const observer = new MutationObserver(() => {
+      		const userInput = viewer.shadowRoot?.querySelector(".userInput");
+      		if (userInput) {
+      			userInput.style.outline = "none";
+      			observer.disconnect();
+      		}
+      	});
+
+      	viewer.updateComplete.then(() => {
+      		observer.observe(viewer.shadowRoot, { childList: true, subtree: true });
+      	});
+      });
+
+
+    }(window.jQuery);
+</script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+
+</body></html>
